@@ -1,10 +1,8 @@
 #include <stdio.h>
-int main(){
-	//khai bao 1 bien so nguyen 
-	int x;
-	//khoi tao gia tri bat ky 
-	x=10;
-	//in ra man hinh 
+int main(){ 
+	int x = 10;
+	printf("gia tri cua x la: %d \n", x);
+	x = 45;
 	printf("gia tri cua x la: %d", x);
 	return 0;
 }
