@@ -1,22 +1,33 @@
-#include<stdio.h>
+//Tinh so chu dien.
+
+#include <stdio.h>
 int main()
 {
-	int N,t;
-	printf ("Nhap so dien: ");
+	int N, t;
+	printf ("Nhap so chu dien: ");
 	scanf ("%d",&N);
-	if (N<=100)
-	t = 950 * N;
-	else
-		{
-			if (N<=150)
-			t = 1250 * N;
-			else 	
-			{
-				if(N<=200)
-				t = 1350 * N;
-				else 
-				t = 1550 * N;
-			}
+	if(N<=100)
+	{
+		t = N * 950;
 	}
-	printf ( "so tien dien la: %d",t);
+	else
+	{
+		if(N<=150)
+		{
+			t = (100 * 950) + (N - 100) * 1250;
+		}
+		else
+		{
+			if(N<=200)
+			{
+				t = (100 * 950) + (50 * 1250) + (N - 150) * 1350;
+			}
+			else
+			{
+				t = (100 * 950) + (50 * 1250) + (50 * 1350) + (N - 200) * 1550;
+			}
+		}
+	}
+	printf ("So tien dien la: %d", t);
+	return 0;
 }
