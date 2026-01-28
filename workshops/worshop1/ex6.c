@@ -4,34 +4,16 @@ int main()
 	float cc , gk, ck;
 	char diemChu;
 	float tk;
-	printf("Nhap diem chuyen can: ");
-	int kq = scanf(" %f",&cc);
-	if (cc<0 || cc>10 || kq != 1)
+	printf("Nhap diem chuyen can, giua ky, cuoi ky:");
+	int kq = scanf("%f %f %f",&cc, &gk, &ck);
+	if(kq !=3 || cc <0 || gk<0 || ck<0 || cc>10 || gk>10 || cc>10 )
 	{
 		printf("Nhap sai!");
 		return 0;
 	}
 	else
 	{
-		printf("Nhap diem giua ky: ");
-		kq = scanf(" %f",&gk);
-		if (gk<0 || gk>10 || kq != 1)
-		{
-			printf("Nhap sai!");
-			return 0;
-		}
-		else
-		{
-			printf("Nhap diem cuoi ky: ");
-			kq = scanf(" %f",&ck);
-			if (ck<0 || ck>10 || kq != 1)
-			{
-				printf("Nhap sai!");
-				return 0;
-			}
-	else
-	{
-		tk = cc * 0.1 + gk + 0.3 + ck * 0.6;
+		tk = cc * 0.1 + gk * 0.3 + ck * 0.6;
 		if (tk >= 8.5)
 		{
 			diemChu = 'A';
@@ -73,5 +55,5 @@ int main()
 		}
 	}
 	return 0;
+
 }
-}}
